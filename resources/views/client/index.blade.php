@@ -1,16 +1,10 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> --}}
 @extends('layouts.master')
 
 @section('content')
+@section('links')
     
 {{-- css DataTable --}}
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 {{-- Responsive Extension Datatables CSS --}}
 <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
 {{-- dataTable buttons --}}
@@ -19,25 +13,22 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.2/css/select.dataTables.min.css">
 {{-- icon --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    @vite(['resources/css/app.css','resources/js/app.js'])
+@vite(['resources/css/app.css','resources/js/app.js'])
 
-{{-- </head> --}}
-{{-- <body> --}}
+@endsection
+
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-        <!--Container-->
+        {{-- <!--Container--> --}}
         <div class="container w-full md:w-4/5   mx-auto px-2">
-  {{-- @auth
-  {{dump( Auth::user()->role_id )}}
-  @endauth --}}
       
-  <!--Title-->
+  {{-- <!--Title--> --}}
             <h1 class="flex items-center font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl">
                 Clients Table
             </h1>
     
-            <!--Card-->
+            {{-- <!--Card--> --}}
             <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
     
     
@@ -219,7 +210,3 @@
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.colVis.min.js"></script>
 
 @endsection
-
-
-{{-- </body> --}}
-{{-- </html>     --}}

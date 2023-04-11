@@ -1,16 +1,4 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css','resources/js/app.js'])
-
-</head>
-<body> --}}
-
-    @extends('layouts.master')
+@extends('layouts.master')
 
     @section('content')
     <div class="p-6 flex flex-wrap items-center justify-center mt-12">
@@ -20,7 +8,7 @@
                     <div class="flex flex-col items-center pb-6">
                         <img class="w-24 h-24 mb-3 mt-1 rounded-full shadow-lg" src="/img/img2.jpg" alt="{{$profile->id}} Bonnie image"/>
                         <h5 class="mb-1 text-xl font-medium text-gray-900">{{$profile->name}}</h5>
-                        <span class="text-sm text-gray-500 mb-2">{{$profile->email}}</span>
+                        <span class="text-sm text-gray-500 mb-2"> <a href="mailto:{{$profile->email}}">{{$profile->email}}</a> </span>
     
                         <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">
                             @if ($profile->role_id==1)
@@ -58,7 +46,3 @@
         </a>
         </div>
     @endsection
-    
-    
-    {{-- </body>
-    </html> --}}

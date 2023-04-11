@@ -36,10 +36,10 @@ class ClientController extends Controller
     public function store(ClientRequest $request)
     {
         $msg = "votre inscription a bien été enregistrée";
-        if ($request->situation_familiale == 0 && $request->montant_facture >= 900) {
-            $msg = "Tu as besoin d'une etude pour diminuer votre consomation {un de nos experts va vous contacter dans la 24h suivante}. ";
-        } elseif ($request->situation_familiale == 1 && $request->montant_facture >= 1400) {
-            $msg = "Tu as besoin d'une etude pour diminuer votre consomation {un de nos experts va vous contacter dans la 24h suivante}. ";
+        if ($request->reste_a_vivre >= 1200) {
+            $msg = "Tu as besoin d'une etude pour diminuer votre consomation 'un de nos experts va vous contacter dans la 24h suivante'. ";
+        } elseif ($request->situation_familiale == 1 && $request->montant_facture >= 1400 || $request->situation_familiale == 0 && $request->montant_facture >= 1400) {
+            $msg = "Tu as besoin d'une etude pour diminuer votre consomation 'un de nos experts va vous contacter dans la 24h suivante'. ";
         } else {
             $msg = 'Felicitation votre consomation est dans les normes !! ';
         };
