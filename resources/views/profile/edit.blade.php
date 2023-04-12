@@ -62,7 +62,11 @@
                             <div class="flex">
                                 <select id="countries" name="role_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                     <option value=3 selected>Choisir un role</option>
-                                    <option value=1 @if($profile->role_id == 1) selected @endif>Admin</option>
+                                    @if ( Auth::user()->role_id == 2 )
+                                        {{-- <option value=1 @if($profile->role_id == 1) selected @endif>Admin</option> --}}
+                                    @else
+                                        <option value=1 @if($profile->role_id == 1) selected @endif>Admin</option>
+                                    @endif
                                     <option value=2 @if($profile->role_id == 2) selected @endif>Superuser</option>
                                     <option value=3 @if($profile->role_id == 3) selected @endif>User</option>
                                 </select>

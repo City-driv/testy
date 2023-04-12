@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+    @section('profiles page')
     @section('content')
     <div class="p-6 flex flex-wrap items-center justify-center mt-12">
         

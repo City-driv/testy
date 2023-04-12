@@ -62,7 +62,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        if (Auth::user()->role_id == 1 or  Auth::user()->role_id == 2) {
+        if (Auth::user()->role_id == 1 ||  Auth::user()->role_id == 2) {
             return view('client.edit', compact('client'));
         };
         return abort(403);
@@ -73,7 +73,7 @@ class ClientController extends Controller
      */
     public function update(ClientRequest $request, Client $client)
     {
-        if (Auth::user()->role_id == 1 or  Auth::user()->role_id == 2) {
+        if (Auth::user()->role_id == 1 ||  Auth::user()->role_id == 2) {
             $client->fill($request->post())->save();
             return redirect()->route('client.index')->with('info', 'Client a été bien modifié');
         };

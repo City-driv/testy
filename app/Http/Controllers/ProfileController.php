@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -27,7 +31,7 @@ class ProfileController extends Controller
         if (Auth::user()->role_id == 1) {
             return view('profile.create');
         }
-        return abort(403);
+        return redirect()->route('profile.index')->with('info', "Ooops!Vous n'avez pas l'autorisation de modifier ce compte.");
     }
 
     /**
@@ -59,10 +63,10 @@ class ProfileController extends Controller
     public function edit(Profile $profile)
     {
         // dump($profile);
-        if (Auth::user()->role_id == 1) {
+        if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2 && $profile->role_id !== 1 ) {
             return view('profile.edit', compact('profile'));
         };
-        return abort(403);
+        return redirect()->route('profile.index')->with('info', "Ooops!Vous n'avez pas l'autorisation de modifier ce compte.");
     }
 
     /**
@@ -70,11 +74,11 @@ class ProfileController extends Controller
      */
     public function update(ProfileRequest $request, Profile $profile)
     {
-        if (Auth::user()->role_id == 1) {
+        if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2 && $profile->role_id !== 1 ) {
             $profile->fill($request->post())->save();
             return redirect()->route('profile.index')->with('info', 'Le compte a été bien modifié');
         }
-        return abort(403);
+        return redirect()->route('profile.index')->with('info', "Ooops!Vous n'avez pas l'autorisation de modifier ce compte.");
     }
 
     /**

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title','home')
 @section('content')
 @section('links')
     
@@ -24,10 +24,21 @@
         <div class="container w-full md:w-4/5   mx-auto px-2">
       
   {{-- <!--Title--> --}}
-            <h1 class="flex items-center font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl">
-                Clients Table
-            </h1>
+            <div class="flex justify-between">
+                <h1 class="flex items-center font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl">
+                    Clients Table
+                </h1>
+
+                <div class="p-6 text-end">
     
+                    <a href="{{route('client.create')}}">
+                    <button class="icon-btn add-btn">
+                        <div class="add-icon"></div>
+                        <div class="btn-txt">Ajouter client</div>
+                    </button>
+                </a>
+                </div>
+            </div>
             {{-- <!--Card--> --}}
             <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
     

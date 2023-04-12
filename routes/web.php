@@ -24,7 +24,7 @@ Route::get('/',[ClientController::class,'index'])->name('main');
 Route::resource('/client',ClientController::class);
 
 // Route::resource('/profile',ProfileController::class);
-Route::resource('/profile',ProfileController::class)->middleware('auth');
+Route::resource('/profile',ProfileController::class);
 
 
 Route::get('/login',[LoginController::class,'show'])->name('login.index');
