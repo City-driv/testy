@@ -120,26 +120,19 @@
     </style>    
 </head>
 <body>
-  
   <div class="result">
     <div class="container1">
       <div class="card1">
         <h1 class="title1">Nous vous remercions de votre participation.</h1>
         <p class="subtitle">{{$msg}}</p>
         🥳
-        <form>
+        {{-- <form>
           <button class="btn" type="submit" onclick="Fermer()">Merci et à bientôt</button>
-        </form>
+        </form> --}}
       </div>
       <div class="blob"></div>
     </div>
   </div>  
-
-  <script>
-      function Fermer(){
-        window.close();
-      }
-  </script>  
   
 </body>
 </html>

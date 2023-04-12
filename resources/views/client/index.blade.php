@@ -142,7 +142,7 @@
                                 {{$client->hebergement}}
                             </td>
                             <td class="px-6 py-4">
-                                {{$client->situation_familiale}}
+                                {{$client->situation_familiale==0 ? 'Célibataire' : 'En couple'}}
                             </td>
                             <td class="px-6 py-4">
                                 {{$client->adresse}}
