@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Merci</title>
-  <style>
+  @vite(['resources/css/app.css','resources/js/app.js'])
+  {{-- <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,7 +14,7 @@
       font-family: "Nunito", sans-serif;
     }
     
-    .result {
+    .result1 {
       background: #ffffff47
     }
     
@@ -46,12 +47,12 @@
       margin-bottom: 1rem;
     }
     
-    .subtitle {
+    .subtitle1 {
       font-size: 1rem;
       margin-bottom: 2rem;
     }
     
-    .btn {
+    .btn1 {
       background: none;
       border: none;
       text-align: center;
@@ -62,7 +63,7 @@
       border-radius: 2rem;
       cursor: pointer;
     }
-    .btn:hover{
+    .btn1:hover{
       color: rgb(0, 0, 0);
       background-color: #5c9df1;
     }
@@ -117,17 +118,17 @@
         border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
       }
     }
-    </style>    
+    </style>     --}}
 </head>
 <body>
-  <div class="result">
+  <div class="result1">
     <div class="container1">
       <div class="card1">
         <h1 class="title1">Nous vous remercions de votre participation.</h1>
-        <p class="subtitle">{{$msg}}</p>
+        <p class="subtitle1">{{$msg}}</p>
         🥳
         {{-- <form>
-          <button class="btn" type="submit" onclick="Fermer()">Merci et à bientôt</button>
+          <button class="btn1" type="submit" onclick="Fermer()">Merci et à bientôt</button>
         </form> --}}
       </div>
       <div class="blob"></div>
