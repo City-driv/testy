@@ -25,7 +25,7 @@ class ClientRequest extends FormRequest
             'nom'=>'required|between:3,20',
             'prenom'=>'required|between:3,20',
             'telephone'=>'required',
-            'email'=>'required|email',
+            'email'=>'required|email|unique:clients',
             'genre'=>'required',
             'hebergement'=>'required',
             'situation_familiale'=>'required',
