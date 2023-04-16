@@ -14,9 +14,6 @@
         <h1 class="title1">Nous vous remercions de votre participation.</h1>
         <p class="subtitle1">{{$msg}}</p>
         🥳
-        @auth
-          <a href="{{route('client.index')}}" class="btn1" >Retourne page d'acceuil</a>
-        @endauth
           {{-- <button class="btn1" id="bt" onclick="setTimeout('window.close()', 500)">Merci et à bientôt</button> --}}
         
       </div>

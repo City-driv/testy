@@ -29,7 +29,7 @@
                     Clients Table
                 </h1>
 
-                <div class="p-6 text-end">
+                {{-- <div class="p-6 text-end">
     
                     <a href="{{route('client.create')}}">
                     <button class="icon-btn add-btn">
@@ -37,7 +37,7 @@
                         <div class="btn-txt">Ajouter client</div>
                     </button>
                 </a>
-                </div>
+                </div> --}}
             </div>
             {{-- <!--Card--> --}}
             <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">

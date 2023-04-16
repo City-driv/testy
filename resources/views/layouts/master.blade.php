@@ -15,8 +15,8 @@
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="/" class="flex items-center">
-        <img src="{{url('img/logo.png')}}" class="rounded-full w-18 h-10 m-2" alt="IDW Logo">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">IDW </span>
+        <img src="{{url('img/logo.png')}}" class="rounded-full w-16 h-12 m-2" alt="IDW Logo">
+        {{-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">IDW </span> --}}
     </a>
     <div class="flex md:order-2">
 {{-- @auth --}}
