@@ -22,18 +22,18 @@ class ClientRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nom'=>'required|between:3,20',
-            'prenom'=>'required|between:3,20',
-            'telephone'=>'required',
-            'email'=>'required|email|unique:clients',
-            'genre'=>'required',
-            'hebergement'=>'required',
-            'situation_familiale'=>'required',
-            'adresse'=>'required',
-            'ville'=>'required',
-            'departement'=>'required',
-            'montant_facture'=>'required',
-            'reste_a_vivre'=>''
+            'nom' => 'required|between:3,20',
+            'prenom' => 'required|between:3,20',
+            'telephone' => 'required',
+            'email' => 'required|email',
+            'genre' => 'required',
+            'hebergement' => 'required',
+            'situation_familiale' => 'required',
+            'adresse' => 'required',
+            'ville' => 'required',
+            'departement' => 'required',
+            'montant_facture' => 'required',
+            'reste_a_vivre' => ''
         ];
     }
 }
